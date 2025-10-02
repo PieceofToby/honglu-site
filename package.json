@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@fontsource/karla": "^5.2.8",
-    "astro": "^5.14.1"
+    "astro": "^5.14.1",
+    "astro-tabs": "^0.1.8"
   }
 }
