@@ -1,12 +1,15 @@
 ---
 import { Tabs } from 'astro-tabs';
-// ...
+
 ---
 
+<section>
+
+
 <Tabs class="pass-your-own-class">
-  <Fragment slot="tab-1">Tab 1</Fragment>
-  <Fragment slot="tab-2">Tab 2</Fragment>
-  <Fragment slot="tab-3">Tab 3</Fragment>
+  <Fragment slot="tab-1">Skill 1</Fragment>
+  <Fragment slot="tab-2">Skill 2</Fragment>
+  <Fragment slot="tab-3">Skill 3</Fragment>
 
   <Fragment slot="panel-1">
     <h2>Panel 1</h2>
@@ -26,3 +29,23 @@ import { Tabs } from 'astro-tabs';
     <h2>Panel 3</h2>
   </Fragment>
 </Tabs>
+
+</section>
+
+<style>
+  /* THIS IS FOR MOST OF YOUR STYLING */
+
+
+</style>
+<style is:global>
+/* THIS IS ONLY FOR THE TAB button STYLING */
+.tab{
+  padding:1rem;
+}
+
+
+.panel{}
+
+
+
+</style>

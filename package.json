@@ -10,7 +10,12 @@
   },
   "dependencies": {
     "@fontsource/karla": "^5.2.8",
+    "@iconify-json/fa7-solid": "^1.2.2",
     "astro": "^5.14.1",
+    "astro-icon": "^1.1.5",
     "astro-tabs": "^0.1.8"
+  },
+  "devDependencies": {
+    "sass-embedded": "^1.93.2"
   }
 }
