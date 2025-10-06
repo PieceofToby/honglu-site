@@ -1,6 +1,6 @@
 ---
 import { Tabs } from 'astro-tabs';
-
+const { first,second,third } = Astro.props;
 ---
 
 <section>
@@ -12,12 +12,12 @@ import { Tabs } from 'astro-tabs';
   <Fragment slot="tab-3">Skill 3</Fragment>
 
   <Fragment slot="panel-1">
-    <h2>Panel 1</h2>
+    <h3>{first}</h3>
     <p>Hello world</p>
   </Fragment>
 
   <Fragment slot="panel-2">
-    <h2>Panel 2</h2>
+    <h3>{second}</h3>
 
     <img
       height="400"
@@ -26,7 +26,7 @@ import { Tabs } from 'astro-tabs';
   </Fragment>
 
   <Fragment slot="panel-3">
-    <h2>Panel 3</h2>
+    <h3>{third}</h3>
   </Fragment>
 </Tabs>
 
