@@ -7,9 +7,6 @@ const { text } = Astro.props;
     <slot name="left" />
   </div>
   <div class="col">
-    <slot name="center" />
-  </div>
-  <div class="col">
     <slot name="right" />
   </div>
 </div>
@@ -17,7 +14,7 @@ const { text } = Astro.props;
 <style>
   .container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
 

@@ -7,15 +7,42 @@ import { Content as SampleMarkdown } from "@content/Untitled document.md";
 import { Image } from "astro:assets";
 import Identities from "@components/sections/Identities.astro";
 import BaseLu from "@assets/images/Hongie.webp";
+import TwoColumn from "@components/TwoColumn.astro";
+import BaseSprite from "@assets/images/BaseSprite.webp"
 ---
 
 <Layout title="Astro Starter">
-
+  <h1>Identities</h1>
+<section id="Identities">
+  <h2>LCB Sinner Hong Lu</h2>
   <Image src={BaseLu} alt="A picture of Honglu" />
-
-  <Identities first="Downward Cleave" second="Dual Strike" third="Whirlwind">
-
+  <h2>“My name’s Hong Lu. I hope we can get along well.”</h2>
+  <TwoColumn>
+  <Identities slot="left" first="Downward Cleave" second="Dual Strike" third="Whirlwind">
+    <Fragment slot="panel-1">
+      <ul>
+        <li>[On Hit] Inflict 2 Sinking</li>
+      </ul>
+    </Fragment>
+    <Fragment slot="panel-2">
+      <ul>
+        <li>[On Hit] Inflict 2 Sinking</li>
+        <li>[On Hit] Inflict 2 Rupture</li>
+      </ul>
+    </Fragment>
+    <Fragment slot="panel-3">
+      <ul>
+        <li>[Heads Hit] Inflict 2 Attack Power Down</li>
+        <li>[On Hit] Inflict 2 Sinking</li>
+        <li>[On Hit] Inflict 2 Rupture</li>
+      </ul>
+    </Fragment>
   </Identities>
+  <Image src={BaseSprite} slot="right" alt=""/>
+</TwoColumn>
+
+  </section>
+  
   <Container>
     <Image src={AstroLogo} alt="" />
     <h1>a simple Astro Starter Kit</h1>

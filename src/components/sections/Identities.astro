@@ -11,22 +11,19 @@ const { first,second,third } = Astro.props;
   <Fragment slot="tab-2">Skill 2</Fragment>
   <Fragment slot="tab-3">Skill 3</Fragment>
 
-  <Fragment slot="panel-1">
+  <Fragment>
     <h3>{first}</h3>
-    <p>Hello world</p>
+    <slot name="panel-1"/>
   </Fragment>
 
   <Fragment slot="panel-2">
     <h3>{second}</h3>
-
-    <img
-      height="400"
-      src="https://res.cloudinary.com/dzfylx93l/image/upload/v1664340439/astro-takeoff-1_ecdfxf.gif"
-    />
+    <slot name="panel-2"/>
   </Fragment>
 
   <Fragment slot="panel-3">
     <h3>{third}</h3>
+    <slot name="panel-3"/>
   </Fragment>
 </Tabs>
 
