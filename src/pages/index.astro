@@ -15,15 +15,14 @@ import WCorpSprite from "@assets/images/WCorpSprite.webp";
 import FanghuntNorm from "@assets/images/FanghuntNorm.png";
 import FanghuntUpgrade from "@assets/images/FanghuntUpgrade.png";
 import FanghuntSprite from "@assets/images/FanghuntSprite.png";
-
-
+import BaseEGO from "@assets/images/BaseEGO.webp";
+import ZAYIN from "@assets/images/ZAYIN.png";
 ---
 
 <Layout title="Astro Starter">
+<section id="Identities">  
   
   <h1>Identities</h1>
-
-<section id="Identities">
   
   <h2>LCB Sinner Hong Lu</h2>
   <Image src={BaseLu} alt="A picture of Honglu" />
@@ -126,9 +125,39 @@ import FanghuntSprite from "@assets/images/FanghuntSprite.png";
 
 </section>
 
+<section id="EGOs">
+ 
+ <h1>EGOs</h1>
+  <TwoColumn>
+    <h2 slot="left">Land of Illusion Hong Lu</h2>
 
+    <Image src={BaseEGO} slot="left" alt=""/>
 
+    <h2 slot="right">“Let’s visit the world of wonders”</h2>
+      <div class="EGOtype" slot="right">
+   <p slot="right">Risk level:</p> <Image src={ZAYIN} slot="right" alt=""/>
+      </div>
+    
+      <ul slot="right">
+      <li>[After Attack] Heal 15 SP</li>
+      <li>[On hit] Onflict 5 Sinking</li>
+      <li>After Attack] Next turn: -2 SP Loss Efficiency to all allies; -2 to amount of SP lost from E.G.O use</li>
+    </ul>
+  </TwoColumn>
+
+</section>
 
 
 
 </Layout>
+
+<style>
+
+.EGOtype {
+display: flex;
+padding: 1rem;
+}
+
+
+  
+</style>
