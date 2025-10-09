@@ -12,6 +12,11 @@ import BaseSprite from "@assets/images/BaseSprite.webp";
 import WCorpNorm from "@assets/images/WCorpNorm.png";
 import WCorpUpgrade from "@assets/images/WCorpUpgrade.png";
 import WCorpSprite from "@assets/images/WCorpSprite.webp";
+import FanghuntNorm from "@assets/images/FanghuntNorm.png";
+import FanghuntUpgrade from "@assets/images/FanghuntUpgrade.png";
+import FanghuntSprite from "@assets/images/FanghuntSprite.png";
+
+
 ---
 
 <Layout title="Astro Starter">
@@ -48,18 +53,55 @@ import WCorpSprite from "@assets/images/WCorpSprite.webp";
   <Image src={BaseSprite} slot="right" alt=""/>
 </TwoColumn>
 
- <h2>W2 Corp. L2 Cleanup Agent Hong Lu</h2>
+<h2>W2 Corp. L2 Cleanup Agent Hong Lu</h2>
   <Image src={WCorpNorm} alt="A picture of Honglu" />
   <Image src={WCorpUpgrade} alt=""/>
-  <h2> “Those WARP Trains tend to be rather cramped, don’t you think?” </h2>
+<h2> “Those WARP Trains tend to be rather cramped, don’t you think?”</h2>
 
   <TwoColumn>
     <Identities slot="left" first="Energy Cycle" second="Cleanup Support" third="Deploy Charge Barrier">
       <Fragment slot="panel-1">
+      <p>[On Use] Gain +4 Charge Count</p>
       <ul>
-        <li>[On Use] Gain +4 Charge Count</li>
-        <li>[On Use] Gain +1 Charge Count</li>
-        <li>[On Use] Gain +1 Charge Count</li>
+        <li>[On Hit] Gain +1 Charge Count</li>
+        <li>[On Hit] Gain +1 Charge Count</li>
+      </ul>
+      </Fragment>
+      <Fragment slot="panel-2">
+      <p>[On Use] Gain +3 Charge Count </p>
+      <p>Clash Power +2 when Shielded</p>
+      <ul>
+        <li>[On Hit] Gain +3 Charge Count</li>
+        <li>[On Hit] At 5+ Charge Count, gain 1 Charge Barrier for every 5 Charge Count next turn (Max 4)</li>
+      </ul>
+      </Fragment>
+      <Fragment slot="panel-3">
+      <p>[On Use] At 10+ Charge Count, consume all Charge Count to apply Charge Barrier to 2 allies with the lowest HP percentage</p>
+      <ul>
+        <li>[On Hit] Inflict 5 Rupture</li>
+        <li>[On Hit] Gain 2 Charge Barrier next turn</li>
+      </ul>
+      </Fragment>
+    </Identities>
+   
+    <Image src={WCorpSprite} slot="right" alt=""/>
+
+  </TwoColumn>
+
+<h2>Fanghunt Office Fixer Hong Lu</h2>
+  <Image src={FanghuntNorm} alt="A picture of Honglu" />
+  <Image src={FanghuntUpgrade} alt=""/>
+<h2>“Bloodfiends are not only vile, they're also very persistent. So~ we should make sure we have everything ready to take them on, right?"</h2>
+  
+  <TwoColumn>
+    <Identities slot="left" first="Slam" second="Bonecrusher" third="A Cheerful Hunt's End">
+      <Fragment slot="panel-1">
+      <p>If target has 6+ Rupture, Coin Power +1</p>
+      <ul>
+        <li>[On Hit] Inflict 1 Rupture</li>
+        <li>[Heads Hit] Inflict 1 Rupture</li>
+        <li>[On Hit] Inflict 1 Rupture</li>
+        <li>[Heads Hit] Inflict 1 Rupture</li>
       </ul>
       </Fragment>
       <Fragment slot="panel-2">
@@ -78,11 +120,9 @@ import WCorpSprite from "@assets/images/WCorpSprite.webp";
       </Fragment>
     </Identities>
    
-    <Image src={WCorpSprite} slot="right" alt=""/>
+    <Image src={FanghuntSprite} slot="right" alt=""/>
 
   </TwoColumn>
-
-  
 
 </section>
 
