@@ -17,18 +17,24 @@ import FanghuntUpgrade from "@assets/images/FanghuntUpgrade.png";
 import FanghuntSprite from "@assets/images/FanghuntSprite.png";
 import BaseEGO from "@assets/images/BaseEGO.webp";
 import ZAYIN from "@assets/images/ZAYIN.png";
+import ImageSwitcher from "@components/ImageSwitcher.astro";
 ---
 
 <Layout title="Astro Starter">
-<section id="Identities">  
+<ImageSwitcher title1="Normal" title2="Upgrade">
+ <Image slot="slot-1"    src={WCorpNorm} alt="A picture of Honglu" />
+  <Image  slot="slot-2"  src={WCorpUpgrade} alt=""/>
+
+</ImageSwitcher>
   
+<section id="Identities">  
   <h1>Identities</h1>
   
   <h2>LCB Sinner Hong Lu</h2>
   <Image src={BaseLu} alt="A picture of Honglu" />
   <h2>“My name’s Hong Lu. I hope we can get along well.”</h2>
   
-  <TwoColumn>
+  <TwoColumn width1="2" width2="1">
     <Identities slot="left" first="Downward Cleave" second="Dual Strike" third="Whirlwind">
       <Fragment slot="panel-1">
       <ul>

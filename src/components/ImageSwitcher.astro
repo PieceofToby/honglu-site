@@ -1,0 +1,47 @@
+---
+import { Tabs } from "astro-tabs";
+const {title1,title2}= Astro.props;
+---
+<Tabs class="tab-panel" class:list={['pass-your-class-list']}>
+
+  <Fragment slot="tab-1">{title1}</Fragment>
+  <Fragment slot="tab-2">{title2}</Fragment>
+
+  <Fragment slot="panel-1">
+  <div class="image-container">
+      <slot name="slot-1"/>
+
+  </div>
+  </Fragment>
+
+  <Fragment slot="panel-2">
+      <div class="image-container">
+      <slot name="slot-2"/>
+
+  </div>
+
+  </Fragment>
+
+ 
+</Tabs>
+
+
+<style>
+.tab-panel{
+display:flex;
+flex-direction: row-reverse;
+padding:0 2rem;
+justify-content: center;
+
+}
+.tab-panel :global(nav){
+  display: flex;
+  flex-direction: column;
+  overflow-x: visible;
+}
+
+.image-container{
+  max-width:600px;
+
+}
+</style>
