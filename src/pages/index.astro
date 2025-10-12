@@ -17,16 +17,16 @@ import FanghuntUpgrade from "@assets/images/FanghuntUpgrade.png";
 import FanghuntSprite from "@assets/images/FanghuntSprite.png";
 import BaseEGO from "@assets/images/BaseEGO.webp";
 import ZAYIN from "@assets/images/ZAYIN.png";
+import TETH from "@assets/images/TETH.png";
+import WAW from "@assets/images/WAW.png";
 import ImageSwitcher from "@components/ImageSwitcher.astro";
+import YurodivyNorm from "@assets/images/YurodivyNorm.webp";
+import YurodivyUpgrade from "@assets/images/YurodivyUpgrade.webp";
+import YurodivySprite from "@assets/images/YurodivySprite.webp";
 ---
 
 <Layout title="Astro Starter">
-<ImageSwitcher title1="Normal" title2="Upgrade">
- <Image slot="slot-1"    src={WCorpNorm} alt="A picture of Honglu" />
-  <Image  slot="slot-2"  src={WCorpUpgrade} alt=""/>
 
-</ImageSwitcher>
-  
 <section id="Identities">  
   <h1>Identities</h1>
   
@@ -58,12 +58,17 @@ import ImageSwitcher from "@components/ImageSwitcher.astro";
   <Image src={BaseSprite} slot="right" alt=""/>
 </TwoColumn>
 
+  
 <h2>W2 Corp. L2 Cleanup Agent Hong Lu</h2>
-  <Image src={WCorpNorm} alt="A picture of Honglu" />
-  <Image src={WCorpUpgrade} alt=""/>
+
+<ImageSwitcher title1="Normal" title2="Upgrade">
+ <Image slot="slot-1"    src={WCorpNorm} alt="A picture of Honglu" />
+  <Image  slot="slot-2"  src={WCorpUpgrade} alt=""/>
+</ImageSwitcher>
+
 <h2> “Those WARP Trains tend to be rather cramped, don’t you think?”</h2>
 
-  <TwoColumn>
+  <TwoColumn width1="2" width2="1">
     <Identities slot="left" first="Energy Cycle" second="Cleanup Support" third="Deploy Charge Barrier">
       <Fragment slot="panel-1">
       <p>[On Use] Gain +4 Charge Count</p>
@@ -94,11 +99,15 @@ import ImageSwitcher from "@components/ImageSwitcher.astro";
   </TwoColumn>
 
 <h2>Fanghunt Office Fixer Hong Lu</h2>
-  <Image src={FanghuntNorm} alt="A picture of Honglu" />
-  <Image src={FanghuntUpgrade} alt=""/>
+
+<ImageSwitcher title1="Normal" title2="Upgrade">
+  <Image slot="slot-1" src={FanghuntNorm} alt="A picture of Honglu" />
+  <Image slot="slot-2" src={FanghuntUpgrade} alt=""/>
+</ImageSwitcher>
+
 <h2>“Bloodfiends are not only vile, they're also very persistent. So~ we should make sure we have everything ready to take them on, right?"</h2>
   
-  <TwoColumn>
+  <TwoColumn width1="2" width2="1">
     <Identities slot="left" first="Slam" second="Bonecrusher" third="A Cheerful Hunt's End">
       <Fragment slot="panel-1">
       <p>If target has 6+ Rupture, Coin Power +1</p>
@@ -128,6 +137,59 @@ import ImageSwitcher from "@components/ImageSwitcher.astro";
     <Image src={FanghuntSprite} slot="right" alt=""/>
 
   </TwoColumn>
+
+<h2>District 20 Yurodivy Hong Lu</h2>
+
+<ImageSwitcher title1="Normal" title2="Upgrade">
+  <Image slot="slot-1" src={YurodivyNorm} alt="A picture of Honglu" />
+  <Image slot="slot-2" src={YurodivyUpgrade} alt=""/>
+</ImageSwitcher>
+
+<h2>“So this was the murder scene? Hmm… What an amateurish finish… They must’ve been really pressed for time.”</h2>
+  
+  <TwoColumn width1="1" width2=".5">
+    <Identities slot="left" first="Deduction Start" second="Morph Cane Technique" third="You're The Culprit!">
+      <Fragment slot="panel-1">
+        <p>[On Use] Gain +2 Tremor Count</p>
+        <p>At 6+ Tremor Count, Coin Power +1</p>
+        <ul>
+          <li>[On Hit] Inflict 2 Tremor</li>
+          <li>[On Hit] Gain +2 Tremor Count</li>
+        </ul>
+      </Fragment>
+      <Fragment slot="panel-2">
+        <p>[On Use] If target has 6+ Tremor, Clash power +1</p>
+        <p>[On Use] Gain +3 Tremor Count</p>
+        <p>At 5+ Tremor Count, Coin Power +1</p>
+        <ul>
+          <li>[On Use] Gain +3 Tremor Count </li>
+          <li>[On Hit] Inflict 3 Tremor</li>
+          <li>[On Hit] If target has 6+ Tremor, trigger Tremor Burst; then, reduce target's Tremor Count by 1</li>
+        </ul>
+      </Fragment>
+      <Fragment slot="panel-3">
+        <p>[On Use] Clash Power +1 for every 6 Tremor on target (max 2)</p>
+        <p>[On Use] At less than 15 Tremor Count on self, consume 10 Tremor Count to gain Coin Power +2 </p>
+        <p>[On Use] Consume 15 Tremor Count on self to gain Coin Power +3</p>
+        <ul>
+          <li>[On Hit] If this Skill consumed Tremor Count On Use, trigger Amplitude Entanglement into Tremor - Reverb</li>
+          <li>[On Hit] Trigger Tremor Burst; then, reduce target's Tremor Count by 1</li>
+          <li>[On Hit] If this Skill consumed 10+ Tremor Count on Skill Use, trigger Tremor Burst; then, reduce target's Tremor Count by 1</li>
+          <li>[On Hit] If this Skill consumed 10+ Tremor Count on Skill Use, trigger Tremor Burst; then, reduce target's Tremor Count by 1 </li>
+            <ul>
+              <li>If this unit consumed less than 15 Tremor Count, trigger Tremor Burst on self after activating the above effect</li>
+            </ul>
+        </ul>
+      </Fragment>
+    
+    
+    
+    </Identities>
+   
+    <Image src={YurodivySprite} slot="right" alt=""/>
+
+  </TwoColumn>
+
 
 </section>
 
