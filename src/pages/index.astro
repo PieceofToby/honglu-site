@@ -23,6 +23,10 @@ import ImageSwitcher from "@components/ImageSwitcher.astro";
 import YurodivyNorm from "@assets/images/YurodivyNorm.webp";
 import YurodivyUpgrade from "@assets/images/YurodivyUpgrade.webp";
 import YurodivySprite from "@assets/images/YurodivySprite.webp";
+import HongyuanNorm from "@assets/images/HongyuanNorm.webp";
+import HongyuanUpgrade from "@assets/images/HongyuanUpgrade.webp";
+import HongyuanSprite from "@assets/images/HongyuanSprite.png";
+import Hongyuan from "@components/sections/Hongyuan.astro";
 ---
 
 <Layout title="Astro Starter">
@@ -182,15 +186,78 @@ import YurodivySprite from "@assets/images/YurodivySprite.webp";
         </ul>
       </Fragment>
     
-    
-    
     </Identities>
    
     <Image src={YurodivySprite} slot="right" alt=""/>
 
   </TwoColumn>
 
+<h2>The Lord of Hongyuan Hong Lu</h2>
 
+<ImageSwitcher title1="Normal" title2="Upgrade">
+  <Image slot="slot-1" src={HongyuanNorm} alt="A picture of Honglu" />
+  <Image slot="slot-2" src={HongyuanUpgrade} alt=""/>
+</ImageSwitcher>
+
+<h2>“So this is what Daguanyuan looks like from the zenith of Hongyuan, huh? Fuhu, then I suppose…… I have need of this pretense no longer.”</h2>
+  
+  <TwoColumn width1="1" width2="1">
+    <Identities slot="left" first="I Wish to Open the Path" second="Tarnished Blood's Absolute Cleaver of Ambitions [汚血絕志竟成]" third="1. Answer Me, Heishou Packs">
+      <Fragment slot="panel-1">
+        <p>[Combat Start] Apply 1 Defense Power Up to 1+ other allies. (once per turn; max 3; prioritizes targets with Assist Defense; includes Unique Assist Defenses) </p>
+        <p>[On Use] At 6+ (Rupture on target + Poise on self), Coin Power +1 </p>
+        <p>[On Use] If target has 3+ types of negative effects, Clash Power +1</p>
+        <ul>
+          <li>[On Hit] Gain +3 Poise Count</li>
+          <li>[On Hit] Inflict +2 Rupture Count</li>
+        </ul>
+      </Fragment>
+      <Fragment slot="panel-2">
+        <p>[Combat Start] Apply 1 Gluttony DMG Up to all other allies that have Gluttony Skills equipped this turn (once per turn) </p>
+        <p>[On Use] Coin Power +1 for every 6 (Rupture on target + Poise on self) (max 2) </p>
+        <p>[On Use] Gain 3 Poise</p>
+        <ul>
+          <li>[On Hit] Inflict +1 Rupture Count</li>
+          <li>[On Hit] Inflict 3 Tremor</li>
+        </ul>
+        <p class="unbreak">Unbreakable Coin</p>
+        <ul>
+          <li>[On Hit] Inflict 1 Rupture</li>
+        </ul>
+        <p class="unbreak">Unbreakable Coin</p>
+        <ul>
+          <li>Deal +50% damage</li>
+          <li>+50% Damage on Critical Hit</li>
+          <li>[On Hit] Inflict 2 Rupture</li>
+        </ul>
+      </Fragment>
+      <Fragment slot="panel-3">
+        <p>This Skill does not trigger Defense Skills</p>
+        <p> <span style="color:rgb(0, 204, 255)">[On Use]</span> Coin Power +1 for every 4 (Rupture on target + Poise on self) (max 3) </p>
+        <p>[On Use] Gain 5 Poise and +3 Poise Count </p>
+        <p>[After Attack] Among ally Heishou units that can act, choose 1 unit with the least Unrelenting Storm Stack and apply Unrelenting Storm; then, bestow Exalted Command. (once per turn) </p>
+        <ul>
+          <ul>
+            <li>After Exalted Command is complete, The Lord of Hongyuan Hong Lu activates 'I Carve the Path of a Lord' </li>
+            <li>If Exalted Command did not activate, or if the combo Identity is Staggered or defeated before Exalted Command is complete, use 'Lonesome Stand: Sacrifice to Claim The Garden' instead</li>
+          </ul>
+        </ul>
+        <p class="unbreak">Unbreakable Coin</p>
+        <ul>
+          <li>[On Hit] Inflict 1 Offense Level Down for every 2 types of negative effects on target (max 3) </li>
+          <li>[On Hit] Inflict 1 Defense Level Down for every type of Deathrite on target (max 3)</li>
+        </ul>
+      </Fragment>
+    </Identities>
+   
+    <Image src={HongyuanSprite} slot="right" alt=""/>
+
+  </TwoColumn>
+
+  <Hongyuan>
+
+    
+  </Hongyuan>
 </section>
 
 <section id="EGOs">
@@ -227,5 +294,9 @@ padding: 1rem;
 }
 
 
+.unbreak {
+  color:crimson;
+  text-decoration: underline;
+}
   
 </style>
