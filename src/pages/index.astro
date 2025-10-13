@@ -27,6 +27,10 @@ import HongyuanNorm from "@assets/images/HongyuanNorm.webp";
 import HongyuanUpgrade from "@assets/images/HongyuanUpgrade.webp";
 import HongyuanSprite from "@assets/images/HongyuanSprite.png";
 import Hongyuan from "@components/sections/Hongyuan.astro";
+import SodaEGO from "@assets/images/SodaEGO.webp";
+import ToadEGO from "@assets/images/ToadEGO.webp";
+import TearsEGO from "@assets/images/TearsEGO.webp";
+import Tears from "@components/sections/Tears.astro"
 ---
 
 <Layout title="Astro Starter">
@@ -202,7 +206,7 @@ import Hongyuan from "@components/sections/Hongyuan.astro";
 <h2>“So this is what Daguanyuan looks like from the zenith of Hongyuan, huh? Fuhu, then I suppose…… I have need of this pretense no longer.”</h2>
   
   <TwoColumn width1="1" width2="1">
-    <Identities slot="left" first="I Wish to Open the Path" second="Tarnished Blood's Absolute Cleaver of Ambitions [汚血絕志竟成]" third="1. Answer Me, Heishou Packs">
+    <Hongyuan slot="left" first="I Wish to Open the Path" second="Tarnished Blood's Absolute Cleaver of Ambitions [汚血絕志竟成]" third="Answer Me, Heishou Packs" fourth="I Carve the Path of a Lord" fifth="Lonesome Stand: Sacrifice to Claim The Garden [孑孑單身，捨生取园]">
       <Fragment slot="panel-1">
         <p>[Combat Start] Apply 1 Defense Power Up to 1+ other allies. (once per turn; max 3; prioritizes targets with Assist Defense; includes Unique Assist Defenses) </p>
         <p>[On Use] At 6+ (Rupture on target + Poise on self), Coin Power +1 </p>
@@ -248,22 +252,50 @@ import Hongyuan from "@components/sections/Hongyuan.astro";
           <li>[On Hit] Inflict 1 Defense Level Down for every type of Deathrite on target (max 3)</li>
         </ul>
       </Fragment>
-    </Identities>
+      <Fragment slot="panel-4">
+        <p>[On Use] If this unit activated combo with a Heishou Pack Adept Identity: Base Power +1, Coin Power +1 </p>
+        <p>Deal +1% damage for every 1% (missing HP percentage on target + missing HP percentage on self) (max 50%) </p>
+        <p>[On Use] Coin Power +1 for every 6 (Rupture on target + Poise on self) (max 3) </p>
+        <p>[On Use] Deal +10% damage for every 2 types of negative effects on target (max 30%) </p>
+        <p>[On Use] Deal +10% damage for every Heishou Bolus Contamination [黑獸丸染]</p>
+        <p>[After Attack] Gain Heishou Bolus Contamination [黑獸丸染] depending on which Heishou Identity activated Exalted Command</p>
+        <ul>
+          <li>[On Hit] Inflict +1 Rupture Count</li>
+          <li>Deal +50% Damage on Critical Hit </li>
+          <li>[On Hit] Inflict 2 Rupture</li>
+          <li>[On Hit] Inflict 1 Slash Resist Down next turn (once per turn) </li>
+          <li>[On Kill] For 2 ally Heishou Pack Identities with the least SP, heal 10 SP and apply 1 Attack Power Up next turn</li>
+        </ul>
+      </Fragment>
+      <Fragment slot="panel-5">
+        <p>Deal +10% damage for every Life from Death [死中求活] on self </p>
+        <p>Deal +1% damage for every 1% (missing HP percentage on target + missing HP percentage on self) (max 50%) </p>
+        <p>[On Use] At 3+ Life from Death [死中求活], gain +1 Atk Weight </p>
+        <p>[On Use] Coin Power +1 for every 6 (Rupture on target + Poise on self) (max 3) </p>
+        <p>[On Use] Deal +10% damage for every 2 types of negative effects on target (max 30%) </p>
+        <p>[On Use] Deal +10% damage for every Heishou Bolus Contamination [黑獸丸染]</p>
+        <ul>
+          <li>[On Hit] Inflict 1 Rupture.pngRupture</li>
+          <li>[On Hit] Inflict 1 Rupture.pngRupture</li>
+          <li>Deal +10% damage for every type of negative effect on target (max 50%) </li>
+          <li>[On Hit] Inflict 1 Rupture.pngRupture</li>
+          <li>[On Hit] Inflict 1 Slash Resist Down.pngSlash Resist Down next turn (once per turn) </li>
+          <li>[On Kill] Gain 2 Attack Power Up.pngAttack Power Up next turn</li>
+        </ul>
+      </Fragment>
+    </Hongyuan>
    
     <Image src={HongyuanSprite} slot="right" alt=""/>
 
   </TwoColumn>
 
-  <Hongyuan>
-
-    
-  </Hongyuan>
 </section>
 
 <section id="EGOs">
  
  <h1>EGOs</h1>
-  <TwoColumn>
+  
+ <TwoColumn>
     <h2 slot="left">Land of Illusion Hong Lu</h2>
 
     <Image src={BaseEGO} slot="left" alt=""/>
@@ -275,9 +307,99 @@ import Hongyuan from "@components/sections/Hongyuan.astro";
     
       <ul slot="right">
       <li>[After Attack] Heal 15 SP</li>
-      <li>[On hit] Onflict 5 Sinking</li>
-      <li>After Attack] Next turn: -2 SP Loss Efficiency to all allies; -2 to amount of SP lost from E.G.O use</li>
+      <li>[On Hit] Onflict 5 Sinking</li>
+      <li>[After Attack] Next turn: -2 SP Loss Efficiency to all allies; -2 to amount of SP lost from E.G.O use</li>
     </ul>
+  </TwoColumn>
+
+  <TwoColumn>
+    <h2 slot="left">Soda Hong Lu</h2>
+
+    <Image src={SodaEGO} slot="left" alt=""/>
+
+    <h2 slot="right">“Let’s visit the world of wonders”</h2>
+      <div class="EGOtype" slot="right">
+   <p slot="right">Risk level:</p> <Image src={TETH} slot="right" alt=""/>
+      </div>
+    
+      <ul slot="right">
+      <li>[Heads Attack End] Heal 2 allies with the lowest HP percentages for 15 HP </li>
+      <li>[Tails Attack End] Heal 15 SP for 2 allies with the least SP </li>
+      <li>[Crit Attack End] Heal the ally with the lowest HP percentage for 8 HP; Heal the ally with the least SP for 8 SP</li>
+    </ul>
+  </TwoColumn>
+
+  <TwoColumn>
+    <h2 slot="left">Cavernous Wailing Hong Lu</h2>
+
+    <Image src={ToadEGO} slot="left" alt=""/>
+
+    <h2 slot="right">“A heart shaken by sorrow bursts… like this.”</h2>
+      <div class="EGOtype" slot="right">
+   <p slot="right">Risk level:</p> <Image src={TETH} slot="right" alt=""/>
+      </div>
+    
+      <div slot="right">
+        <p>If target has Tremor, deal +(5 + (Tremor on target + Tremor Count on target)/2)% damage (max 30%) </p>
+        <ul>
+          <ul>
+            <li>At 4+ highest Reson., deal +(7.5 + (Tremor on target + Tremor Count on target)/1.5)% damage instead (max 40%)</li>
+          </ul>
+        </ul>
+        <ul>
+          <li>[On Hit] Inflict 3 Tremor.pngTremor and +3 Tremor.pngTremor Count </li>
+          <li>[On Hit] Trigger Amplitude Conversion to Tremor - Reverb </li>
+          <li>[On Hit] Trigger Tremor Burst; then, reduce target's Tremor Count by 1</li>
+        </ul>
+      </div>
+
+  </TwoColumn>
+
+  <TwoColumn width1="1" width2="1">
+    <h2 slot="left">Tears of the Tarnished Blood [汚血泣淚] Hong Lu</h2>
+
+    <Image src={TearsEGO} slot="left" alt=""/>
+
+    <Tears slot="right" first="'With solemn grace, I accept this deserved punishment.'" second="'With contemplation, I shall darken the clear skies above; with my sacrifice, I shall exsanguinate my carnal blood upon this earth.'">
+       <div class="EGOtype" slot="risk">
+         <p slot="right">Risk level:</p> <Image src={WAW} slot="right" alt=""/>
+        </div>
+      <Fragment slot="panel-1">
+        <p class="unbreak">[Unclashable]</p>
+        <p>Ignores the target's Defense Skill </p>
+        <p>This Skill does not hit an enemy </p>
+        <p>[After Attack] Gain Flower-burying Wedge [埋花櫼]</p>
+        <ul>
+          <li>This unit takes fixed damage by this Skill's Final Power </li>
+          <ul>
+            <li>This damage does not Stagger or reduce this unit's HP below 1</li>
+          </ul>
+        </ul>
+      </Fragment>
+      <Fragment slot="panel-2">
+        <p>This Skill does not consume E.G.O Resources </p>
+        <p class="unbreak">[Unclashable]</p>
+        <p>Deal +3% damage for every Flower-burying Wedge [埋花櫼] on self (max 9%) </p>
+        <p>Deal +6% damage for every Tarnished Blood on self (max 30%) </p>
+        <p>[On Use] Coin Power +1 for every 5 Rupture on main target (max 3) </p>
+        <p>[On Use] At 3+ Tarnished Blood, Atk Weight +1 and Base Power +1 </p>
+        <ul>
+          <ul>
+            <li>At 4+ Tarnished Blood, Atk Weight +1 and Base Power +2 instead </li>
+            <li>At 5+ Tarnished Blood, Atk Weight +3 and Base Power +3 instead </li>
+          </ul>
+        </ul>
+        <p>[After Attack] Remove Flower-burying Wedge [埋花櫼] and Tarnished Blood on self, then dies</p>
+        <ul>
+          <li>[On Hit] Inflict +3 Rupture Count</li>
+          <li>[On Hit] Inflict 2 Rupture</li>
+          <li>[On Hit] Inflict 2 Rupture</li>
+          <li>[On Hit] Inflict 2 Rupture</li>
+        </ul>
+      </Fragment>
+
+    </Tears>
+
   </TwoColumn>
 
 </section>
@@ -290,6 +412,7 @@ import Hongyuan from "@components/sections/Hongyuan.astro";
 
 .EGOtype {
 display: flex;
+justify-content: space-evenly;
 padding: 1rem;
 }
 
