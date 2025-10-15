@@ -33,6 +33,8 @@ import TearsEGO from "@assets/images/TearsEGO.webp";
 import Tears from "@components/sections/Tears.astro";
 import HongSprite from "@assets/images/800px-Hong_Lu_Sprite_6.webp";
 import InitialLu from "@assets/images/1024px-E704.webp";
+import YoungLu from "@assets/images/1024px-S814.webp";
+import EndLu from "@assets/images/1024px-S827.webp";
 ---
 
 <Layout title="Astro Starter">
@@ -419,26 +421,37 @@ import InitialLu from "@assets/images/1024px-E704.webp";
 <section id="Canto8">
 
 <h1>Canto 8: The Surrendered Witnessing</h1>
+<div class="cantoimage">
+  <Image src={InitialLu} alt=""/>
+</div>
 
-  <p>As the group traveled towards Nest H, Dante began seeing into the memories that lingered in Hong Lu's mind, starting by witnessing his interactions with Lin Daiyu. 
+  <p><span class="tab"/>As the group traveled towards Nest H, Dante began seeing into the memories that lingered in Hong Lu's mind, starting by witnessing his interactions with Lin Daiyu. 
     Upon the Manager asking Hong Lu if he missed anyone, he said no, commenting that he had no need to see anyone as long as he believed them to be doing well. </p>
 <TwoColumn>
 
 <Image src={HongSprite} slot="left" alt=""/>
 
-   <p slot="right">During their time in the arena, the LCB ended up teaming up with Lin Daiyu as she searched for her clan from which she'd been separated, making Daiyu able to see into Hong Lu's memories as well: Daiyu thus learned about Jia Mu's hand in the fall of the Kong family, and about the abuse Hong Lu had suffered from her and the Xianren, including their retaliation towards Xiren.
-    <br> 
+   <p slot="right"><span class="tab"/>During their time in the arena, the LCB ended up teaming up with Lin Daiyu as she searched for her clan from which she'd been separated, making Daiyu able to see into Hong Lu's memories as well: Daiyu thus learned about Jia Mu's hand in the fall of the Kong family, and about the abuse Hong Lu had suffered from her and the Xianren, including their retaliation towards Xiren.
+    <br><span class="tab"/>
     As Daiyu questioned him about it, Hong Lu confirmed he had been too scared to share this with her, knowing that his actions wouldn't have changed anything, and that they would've only brought pain upon Daiyu as well.</p>
 
 </TwoColumn>
  
-  <p>Eventually, as Jia Qiu reminisced on what he had seen in Hongyuan and in the world outside, and the hardened hearts of people who simply accepted the way things are, Hong Lu considered his own childhood, and how he had often desired someone would comfort him and protect him; he then offered his honest belief that what Hongyuan needed was kindness. </p>
+  <p><span class="tab"/>Eventually, as Jia Qiu reminisced on what he had seen in Hongyuan and in the world outside, and the hardened hearts of people who simply accepted the way things are, Hong Lu considered his own childhood, and how he had often desired someone would comfort him and protect him; he then offered his honest belief that what Hongyuan needed was kindness. </p>
 
-<p>With Dante's encouragement, Hong Lu accepted that he would have to recognize these feelings and accept their importance in order to truly live, even if they would one day change and disappear. 
-  <br> 
+<div class="cantoimage">
+  <Image src={YoungLu} alt=""/>
+</div>
+
+<p><span class="tab"/>With Dante's encouragement, Hong Lu accepted that he would have to recognize these feelings and accept their importance in order to truly live, even if they would one day change and disappear. 
+  <br><span class="tab"/> 
   As Dante reminded Hong Lu that he is a kind person and that the world is worth seeing through his eyes, Hong Lu told his grandmother that he wouldn't accept an eternity without these feelings, and that he knew Hongyuan would prosper without the Hierarch and their endless pursuit of immortality.</p>
 
   </section>
+
+<div class="cantoimage">
+  <Image src={EndLu} alt=""/>
+</div>
 
 </Layout>
 
@@ -466,6 +479,18 @@ padding: 1rem;
 
 section {
   padding-bottom: 2rem;
+}
+
+.cantoimage {
+max-width: 800px;
+margin: auto;
+padding: 1rem;
+}
+
+@media (min-width: 600px){
+.cantoimage {
+max-height: 100%;
+}
 }
 
 
