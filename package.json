@@ -9,7 +9,9 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource-variable/manrope": "^5.2.8",
     "@fontsource/karla": "^5.2.8",
+    "@fontsource/taviraj": "^5.2.8",
     "@iconify-json/fa7-solid": "^1.2.2",
     "astro": "^5.14.1",
     "astro-icon": "^1.1.5",

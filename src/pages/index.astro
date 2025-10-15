@@ -38,67 +38,71 @@ import Tears from "@components/sections/Tears.astro"
 <section id="Identities">  
   <h1>Identities</h1>
   
-  <h2>LCB Sinner Hong Lu</h2>
-  <Image src={BaseLu} alt="A picture of Honglu" />
-  <h2>“My name’s Hong Lu. I hope we can get along well.”</h2>
-  
+<div class="abovecolumn">
+    <h2>LCB Sinner Hong Lu</h2>
+  <ImageSwitcher title1="Normal">
+    <Image slot="slot-1" src={BaseLu} alt="A picture of Honglu" />
+  </ImageSwitcher>
+    <h2>“My name’s Hong Lu. I hope we can get along well.”</h2>
+</div> 
   <TwoColumn width1="2" width2="1">
     <Identities slot="left" first="Downward Cleave" second="Dual Strike" third="Whirlwind">
       <Fragment slot="panel-1">
-      <ul>
-        <li><span style="color:chartreuse">[On Hit]</span> Inflict 2 Sinking</li>
-      </ul>
+        <ul>
+          <li><span style="color:chartreuse">[On Hit]</span> Inflict 2 Sinking</li>
+        </ul>
       </Fragment>
       <Fragment slot="panel-2">
-      <ul>
-        <li><span style="color:chartreuse">[On Hit]</span> Inflict 2 Sinking</li>
-        <li><span style="color:chartreuse">[On Hit]</span> Inflict 2 Rupture</li>
-      </ul>
+        <ul>
+          <li><span style="color:chartreuse">[On Hit]</span> Inflict 2 Sinking</li>
+          <li><span style="color:chartreuse">[On Hit]</span> Inflict 2 Rupture</li>
+        </ul>
       </Fragment>
       <Fragment slot="panel-3">
-      <ul>
-        <li><span style="color:rgb(180, 255, 110)">[Heads Hit]</span> Inflict 2 Attack Power Down</li>
-        <li><span style="color:chartreuse">[On Hit]</span> Inflict 2 Sinking</li>
-        <li><span style="color:chartreuse">[On Hit]</span> Inflict 2 Rupture</li>
-      </ul>
+        <ul>
+          <li><span style="color:rgb(180, 255, 110)">[Heads Hit]</span> Inflict 2 Attack Power Down</li>
+          <li><span style="color:chartreuse">[On Hit]</span> Inflict 2 Sinking</li>
+          <li><span style="color:chartreuse">[On Hit]</span> Inflict 2 Rupture</li>
+        </ul>
       </Fragment>
-  </Identities>
+   </Identities>
   <Image src={BaseSprite} slot="right" alt=""/>
 </TwoColumn>
 
+<div class="abovecolumn">
+  <h2>W2 Corp. L2 Cleanup Agent Hong Lu</h2>
+
+  <ImageSwitcher title1="Normal" title2="Upgrade">
+  <Image slot="slot-1"    src={WCorpNorm} alt="A picture of Honglu" />
+    <Image  slot="slot-2"  src={WCorpUpgrade} alt=""/>
+  </ImageSwitcher>
+
+  <h2> “Those WARP Trains tend to be rather cramped, don’t you think?”</h2>
+</div> 
   
-<h2>W2 Corp. L2 Cleanup Agent Hong Lu</h2>
-
-<ImageSwitcher title1="Normal" title2="Upgrade">
- <Image slot="slot-1"    src={WCorpNorm} alt="A picture of Honglu" />
-  <Image  slot="slot-2"  src={WCorpUpgrade} alt=""/>
-</ImageSwitcher>
-
-<h2> “Those WARP Trains tend to be rather cramped, don’t you think?”</h2>
-
-  <TwoColumn width1="2" width2="1">
+<TwoColumn width1="2" width2="1">
     <Identities slot="left" first="Energy Cycle" second="Cleanup Support" third="Deploy Charge Barrier">
       <Fragment slot="panel-1">
-      <p><span style="color:rgb(0, 204, 255)">[On Use]</span> Gain +4 Charge Count</p>
-      <ul>
-        <li><span style="color:chartreuse">[On Hit]</span> Gain +1 Charge Count</li>
-        <li><span style="color:chartreuse">[On Hit]</span> Gain +1 Charge Count</li>
-      </ul>
+        <p><span style="color:rgb(0, 204, 255)">[On Use]</span> Gain +4 Charge Count</p>
+        <ul>
+          <li><span style="color:chartreuse">[On Hit]</span> Gain +1 Charge Count</li>
+          <li><span style="color:chartreuse">[On Hit]</span> Gain +1 Charge Count</li>
+        </ul>
       </Fragment>
       <Fragment slot="panel-2">
-      <p><span style="color:rgb(0, 204, 255)">[On Use]</span> Gain +3 Charge Count </p>
-      <p>Clash Power +2 when Shielded</p>
-      <ul>
-        <li><span style="color:chartreuse">[On Hit]</span> Gain +3 Charge Count</li>
-        <li><span style="color:chartreuse">[On Hit]</span> At 5+ Charge Count, gain 1 Charge Barrier for every 5 Charge Count next turn (Max 4)</li>
-      </ul>
+        <p><span style="color:rgb(0, 204, 255)">[On Use]</span> Gain +3 Charge Count </p>
+        <p>Clash Power +2 when Shielded</p>
+        <ul>
+          <li><span style="color:chartreuse">[On Hit]</span> Gain +3 Charge Count</li>
+          <li><span style="color:chartreuse">[On Hit]</span> At 5+ Charge Count, gain 1 Charge Barrier for every 5 Charge Count next turn (Max 4)</li>
+        </ul>
       </Fragment>
       <Fragment slot="panel-3">
-      <p><span style="color:rgb(0, 204, 255)">[On Use]</span> At 10+ Charge Count, consume all Charge Count to apply Charge Barrier to 2 allies with the lowest HP percentage</p>
-      <ul>
-        <li><span style="color:chartreuse">[On Hit]</span> Inflict 5 Rupture</li>
-        <li><span style="color:chartreuse">[On Hit]</span> Gain 2 Charge Barrier next turn</li>
-      </ul>
+        <p><span style="color:rgb(0, 204, 255)">[On Use]</span> At 10+ Charge Count, consume all Charge Count to apply Charge Barrier to 2 allies with the lowest HP percentage</p>
+        <ul>
+          <li><span style="color:chartreuse">[On Hit]</span> Inflict 5 Rupture</li>
+          <li><span style="color:chartreuse">[On Hit]</span> Gain 2 Charge Barrier next turn</li>
+        </ul>
       </Fragment>
     </Identities>
    
@@ -106,56 +110,60 @@ import Tears from "@components/sections/Tears.astro"
 
   </TwoColumn>
 
-<h2>Fanghunt Office Fixer Hong Lu</h2>
+<div class="abovecolumn">
+  <h2>Fanghunt Office Fixer Hong Lu</h2>
 
-<ImageSwitcher title1="Normal" title2="Upgrade">
-  <Image slot="slot-1" src={FanghuntNorm} alt="A picture of Honglu" />
-  <Image slot="slot-2" src={FanghuntUpgrade} alt=""/>
-</ImageSwitcher>
+  <ImageSwitcher title1="Normal" title2="Upgrade">
+    <Image slot="slot-1" src={FanghuntNorm} alt="A picture of Honglu" />
+    <Image slot="slot-2" src={FanghuntUpgrade} alt=""/>
+  </ImageSwitcher>
 
-<h2>“Bloodfiends are not only vile, they're also very persistent. So~ we should make sure we have everything ready to take them on, right?"</h2>
-  
+  <h2>“Bloodfiends are not only vile, they're also very persistent. So~ we should make sure we have everything ready to take them on, right?"</h2>
+</div>  
+
   <TwoColumn width1="2" width2="1">
     <Identities slot="left" first="Slam" second="Bonecrusher" third="A Cheerful Hunt's End">
       <Fragment slot="panel-1">
-      <p>If target has 6+ Rupture, Coin Power +1</p>
-      <ul>
-        <li><span style="color:chartreuse">[On Hit]</span> Inflict 1 Rupture</li>
-        <li><span style="color:rgb(180, 255, 110)">[Heads Hit]</span> Inflict 1 Rupture</li>
-        <li><span style="color:chartreuse">[On Hit]</span> Inflict 1 Rupture</li>
-        <li><span style="color:rgb(180, 255, 110)">[Heads Hit]</span> Inflict 1 Rupture</li>
-      </ul>
+        <p>If target has 6+ Rupture, Coin Power +1</p>
+        <ul>
+          <li><span style="color:chartreuse">[On Hit]</span> Inflict 1 Rupture</li>
+          <li><span style="color:rgb(180, 255, 110)">[Heads Hit]</span> Inflict 1 Rupture</li>
+          <li><span style="color:chartreuse">[On Hit]</span> Inflict 1 Rupture</li>
+          <li><span style="color:rgb(180, 255, 110)">[Heads Hit]</span> Inflict 1 Rupture</li>
+        </ul>
       </Fragment>
       <Fragment slot="panel-2">
-      <ul>
-        <li><span style="color:rgb(0, 204, 255)">[On Use]</span> Gain +3 Charge Count </li>
-        <li><span style="color:chartreuse">[On Hit]</span> Gain +3 Charge Count</li>
-        <li><span style="color:chartreuse">[On Hit]</span> At 5+ Charge Count, gain 1 Charge Barrier for every 5 Charge Count next turn (Max 4)</li>
-      </ul>
+        <ul>
+          <li><span style="color:rgb(0, 204, 255)">[On Use]</span> Gain +3 Charge Count </li>
+          <li><span style="color:chartreuse">[On Hit]</span> Gain +3 Charge Count</li>
+          <li><span style="color:chartreuse">[On Hit]</span> At 5+ Charge Count, gain 1 Charge Barrier for every 5 Charge Count next turn (Max 4)</li>
+        </ul>
       </Fragment>
       <Fragment slot="panel-3">
-      <ul>
-        <li><span style="color:rgb(0, 204, 255)">[On Use]</span> At 10+ Charge Count, consume all Charge Count to apply Charge Barrier to 2 allies with the lowest HP percentage</li>
-        <li><span style="color:chartreuse">[On Hit]</span> Inflict 5 Rupture</li>
-        <li><span style="color:chartreuse">[On Hit]</span> Gain 2 Charge Barrier next turn</li>
-      </ul>
+        <ul>
+          <li><span style="color:rgb(0, 204, 255)">[On Use]</span> At 10+ Charge Count, consume all Charge Count to apply Charge Barrier to 2 allies with the lowest HP percentage</li>
+          <li><span style="color:chartreuse">[On Hit]</span> Inflict 5 Rupture</li>
+          <li><span style="color:chartreuse">[On Hit]</span> Gain 2 Charge Barrier next turn</li>
+        </ul>
       </Fragment>
     </Identities>
    
     <Image src={FanghuntSprite} slot="right" alt=""/>
 
   </TwoColumn>
-
-<h2>District 20 Yurodivy Hong Lu</h2>
-
-<ImageSwitcher title1="Normal" title2="Upgrade">
-  <Image slot="slot-1" src={YurodivyNorm} alt="A picture of Honglu" />
-  <Image slot="slot-2" src={YurodivyUpgrade} alt=""/>
-</ImageSwitcher>
-
-<h2>“So this was the murder scene? Hmm… What an amateurish finish… They must’ve been really pressed for time.”</h2>
   
-  <TwoColumn width1="1" width2=".5">
+<div class="abovecolumn">
+  <h2>District 20 Yurodivy Hong Lu</h2>
+
+  <ImageSwitcher title1="Normal" title2="Upgrade">
+    <Image slot="slot-1" src={YurodivyNorm} alt="A picture of Honglu" />
+    <Image slot="slot-2" src={YurodivyUpgrade} alt=""/>
+  </ImageSwitcher>
+
+  <h2>“So this was the murder scene? Hmm… What an amateurish finish… They must’ve been really pressed for time.”</h2>
+</div>   
+  
+  <TwoColumn width1="1" width2=".4">
     <Identities slot="left" first="Deduction Start" second="Morph Cane Technique" third="You're The Culprit!">
       <Fragment slot="panel-1">
         <p><span style="color:rgb(0, 204, 255)">[On Use]</span> Gain +2 Tremor Count</p>
@@ -196,15 +204,17 @@ import Tears from "@components/sections/Tears.astro"
 
   </TwoColumn>
 
-<h2>The Lord of Hongyuan Hong Lu</h2>
+<div class="abovecolumn">
+  <h2>The Lord of Hongyuan Hong Lu</h2>
 
-<ImageSwitcher title1="Normal" title2="Upgrade">
-  <Image slot="slot-1" src={HongyuanNorm} alt="A picture of Honglu" />
-  <Image slot="slot-2" src={HongyuanUpgrade} alt=""/>
-</ImageSwitcher>
+  <ImageSwitcher title1="Normal" title2="Upgrade">
+    <Image slot="slot-1" src={HongyuanNorm} alt="A picture of Honglu" />
+    <Image slot="slot-2" src={HongyuanUpgrade} alt=""/>
+  </ImageSwitcher>
 
-<h2>“So this is what Daguanyuan looks like from the zenith of Hongyuan, huh? Fuhu, then I suppose…… I have need of this pretense no longer.”</h2>
-  
+  <h2>“So this is what Daguanyuan looks like from the zenith of Hongyuan, huh? Fuhu, then I suppose…… I have need of this pretense no longer.”</h2>
+</div>  
+
   <TwoColumn width1="1" width2="1">
     <Hongyuan slot="left" first="I Wish to Open the Path" second="Tarnished Blood's Absolute Cleaver of Ambitions [汚血絕志竟成]" third="Answer Me, Heishou Packs" fourth="I Carve the Path of a Lord" fifth="Lonesome Stand: Sacrifice to Claim The Garden [孑孑單身，捨生取园]">
       <Fragment slot="panel-1">
@@ -296,7 +306,7 @@ import Tears from "@components/sections/Tears.astro"
  <h1>EGOs</h1>
   
  <TwoColumn>
-    <h2 slot="left">Land of Illusion Hong Lu</h2>
+    <h2 slot="left" class="egotitle">Land of Illusion Hong Lu</h2>
 
     <Image src={BaseEGO} slot="left" alt=""/>
 
@@ -313,7 +323,7 @@ import Tears from "@components/sections/Tears.astro"
   </TwoColumn>
 
   <TwoColumn>
-    <h2 slot="left">Soda Hong Lu</h2>
+    <h2 slot="left" class="egotitle">Soda Hong Lu</h2>
 
     <Image src={SodaEGO} slot="left" alt=""/>
 
@@ -330,7 +340,7 @@ import Tears from "@components/sections/Tears.astro"
   </TwoColumn>
 
   <TwoColumn>
-    <h2 slot="left">Cavernous Wailing Hong Lu</h2>
+    <h2 slot="left" class="egotitle">Cavernous Wailing Hong Lu</h2>
 
     <Image src={ToadEGO} slot="left" alt=""/>
 
@@ -356,7 +366,7 @@ import Tears from "@components/sections/Tears.astro"
   </TwoColumn>
 
   <TwoColumn width1="1" width2="1">
-    <h2 slot="left">Tears of the Tarnished Blood [汚血泣淚] Hong Lu</h2>
+    <h2 slot="left" class="egotitle">Tears of the Tarnished Blood [汚血泣淚] Hong Lu</h2>
 
     <Image src={TearsEGO} slot="left" alt=""/>
 
@@ -404,7 +414,24 @@ import Tears from "@components/sections/Tears.astro"
 
 </section>
 
+<section id="Canto8">
 
+<h1>Canto 8: The Surrendered Witnessing</h1>
+
+  <p>As the group traveled towards Nest H, Dante began seeing into the memories that lingered in Hong Lu's mind, starting by witnessing his interactions with Lin Daiyu. 
+    Upon the Manager asking Hong Lu if he missed anyone, he said no, commenting that he had no need to see anyone as long as he believed them to be doing well. </p>
+
+  <p>During their time in the arena, the LCB ended up teaming up with Lin Daiyu as she searched for her clan from which she'd been separated, making Daiyu able to see into Hong Lu's memories as well: Daiyu thus learned about Jia Mu's hand in the fall of the Kong family, and about the abuse Hong Lu had suffered from her and the Xianren, including their retaliation towards Xiren.
+    <br> 
+    As Daiyu questioned him about it, Hong Lu confirmed he had been too scared to share this with her, knowing that his actions wouldn't have changed anything, and that they would've only brought pain upon Daiyu as well.</p>
+
+  <p>Eventually, as Jia Qiu reminisced on what he had seen in Hongyuan and in the world outside, and the hardened hearts of people who simply accepted the way things are, Hong Lu considered his own childhood, and how he had often desired someone would comfort him and protect him; he then offered his honest belief that what Hongyuan needed was kindness. </p>
+
+<p>With Dante's encouragement, Hong Lu accepted that he would have to recognize these feelings and accept their importance in order to truly live, even if they would one day change and disappear. 
+  <br> 
+  As Dante reminded Hong Lu that he is a kind person and that the world is worth seeing through his eyes, Hong Lu told his grandmother that he wouldn't accept an eternity without these feelings, and that he knew Hongyuan would prosper without the Hierarch and their endless pursuit of immortality.</p>
+
+  </section>
 
 </Layout>
 
@@ -422,4 +449,17 @@ padding: 1rem;
   text-decoration: underline;
 }
   
+.abovecolumn h2 {
+  padding-bottom: 1rem;
+}
+
+.egotitle {
+  padding-bottom: 1rem;
+}
+
+section {
+  padding-bottom: 2rem;
+}
+
+
 </style>
