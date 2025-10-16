@@ -39,6 +39,7 @@ import EndLu from "@assets/images/1024px-S827.webp";
 
 <Layout title="Astro Starter">
 
+
 <section id="Identities">  
   <h1>Identities</h1>
   
@@ -222,7 +223,7 @@ import EndLu from "@assets/images/1024px-S827.webp";
   <TwoColumn width1="1" width2="1">
     <Hongyuan slot="left" first="I Wish to Open the Path" second="Tarnished Blood's Absolute Cleaver of Ambitions [汚血絕志竟成]" third="Answer Me, Heishou Packs" fourth="I Carve the Path of a Lord" fifth="Lonesome Stand: Sacrifice to Claim The Garden [孑孑單身，捨生取园]">
       <Fragment slot="panel-1">
-        <p>[Combat Start] Apply 1 Defense Power Up to 1+ other allies. (once per turn; max 3; prioritizes targets with Assist Defense; includes Unique Assist Defenses) </p>
+        <p><span style="color:chartreuse">[Combat Start]</span> Apply 1 Defense Power Up to 1+ other allies. (once per turn; max 3; prioritizes targets with Assist Defense; includes Unique Assist Defenses) </p>
         <p><span style="color:rgb(0, 204, 255)">[On Use]</span> At 6+ (Rupture on target + Poise on self), Coin Power +1 </p>
         <p><span style="color:rgb(0, 204, 255)">[On Use]</span> If target has 3+ types of negative effects, Clash Power +1</p>
         <ul>
@@ -231,7 +232,7 @@ import EndLu from "@assets/images/1024px-S827.webp";
         </ul>
       </Fragment>
       <Fragment slot="panel-2">
-        <p>[Combat Start] Apply 1 Gluttony DMG Up to all other allies that have Gluttony Skills equipped this turn (once per turn) </p>
+        <p><span style="color:chartreuse">[Combat Start]</span> Apply 1 Gluttony DMG Up to all other allies that have Gluttony Skills equipped this turn (once per turn) </p>
         <p><span style="color:rgb(0, 204, 255)">[On Use]</span> Coin Power +1 for every 6 (Rupture on target + Poise on self) (max 2) </p>
         <p><span style="color:rgb(0, 204, 255)">[On Use]</span> Gain 3 Poise</p>
         <ul>
@@ -253,7 +254,7 @@ import EndLu from "@assets/images/1024px-S827.webp";
         <p>This Skill does not trigger Defense Skills</p>
         <p> <span style="color:rgb(0, 204, 255)">[On Use]</span> Coin Power +1 for every 4 (Rupture on target + Poise on self) (max 3) </p>
         <p><span style="color:rgb(0, 204, 255)">[On Use]</span> Gain 5 Poise and +3 Poise Count </p>
-        <p>[After Attack] Among ally Heishou units that can act, choose 1 unit with the least Unrelenting Storm Stack and apply Unrelenting Storm; then, bestow Exalted Command. (once per turn) </p>
+        <p><span style="color:chartreuse">[After Attack]</span> Among ally Heishou units that can act, choose 1 unit with the least Unrelenting Storm Stack and apply Unrelenting Storm; then, bestow Exalted Command. (once per turn) </p>
         <ul>
           <ul>
             <li>After Exalted Command is complete, The Lord of Hongyuan Hong Lu activates 'I Carve the Path of a Lord' </li>
@@ -272,13 +273,13 @@ import EndLu from "@assets/images/1024px-S827.webp";
         <p><span style="color:rgb(0, 204, 255)">[On Use]</span> Coin Power +1 for every 6 (Rupture on target + Poise on self) (max 3) </p>
         <p><span style="color:rgb(0, 204, 255)">[On Use]</span> Deal +10% damage for every 2 types of negative effects on target (max 30%) </p>
         <p><span style="color:rgb(0, 204, 255)">[On Use]</span> Deal +10% damage for every Heishou Bolus Contamination [黑獸丸染]</p>
-        <p>[After Attack] Gain Heishou Bolus Contamination [黑獸丸染] depending on which Heishou Identity activated Exalted Command</p>
+        <p><span style="color:chartreuse">[After Attack]</span> Gain Heishou Bolus Contamination [黑獸丸染] depending on which Heishou Identity activated Exalted Command</p>
         <ul>
           <li><span style="color:chartreuse">[On Hit]</span> Inflict +1 Rupture Count</li>
           <li>Deal +50% Damage on Critical Hit </li>
           <li><span style="color:chartreuse">[On Hit]</span> Inflict 2 Rupture</li>
           <li><span style="color:chartreuse">[On Hit]</span> Inflict 1 Slash Resist Down next turn (once per turn) </li>
-          <li>[On Kill] For 2 ally Heishou Pack Identities with the least SP, heal 10 SP and apply 1 Attack Power Up next turn</li>
+          <li><span style="color:rgb(255, 0, 76)">[On Kill]</span> For 2 ally Heishou Pack Identities with the least SP, heal 10 SP and apply 1 Attack Power Up next turn</li>
         </ul>
       </Fragment>
       <Fragment slot="panel-5">
@@ -289,12 +290,12 @@ import EndLu from "@assets/images/1024px-S827.webp";
         <p><span style="color:rgb(0, 204, 255)">[On Use]</span> Deal +10% damage for every 2 types of negative effects on target (max 30%) </p>
         <p><span style="color:rgb(0, 204, 255)">[On Use]</span> Deal +10% damage for every Heishou Bolus Contamination [黑獸丸染]</p>
         <ul>
-          <li><span style="color:chartreuse">[On Hit]</span> Inflict 1 Rupture.pngRupture</li>
-          <li><span style="color:chartreuse">[On Hit]</span> Inflict 1 Rupture.pngRupture</li>
+          <li><span style="color:chartreuse">[On Hit]</span> Inflict 1 Rupture</li>
+          <li><span style="color:chartreuse">[On Hit]</span> Inflict 1 Rupture</li>
           <li>Deal +10% damage for every type of negative effect on target (max 50%) </li>
-          <li><span style="color:chartreuse">[On Hit]</span> Inflict 1 Rupture.pngRupture</li>
-          <li><span style="color:chartreuse">[On Hit]</span> Inflict 1 Slash Resist Down.pngSlash Resist Down next turn (once per turn) </li>
-          <li>[On Kill] Gain 2 Attack Power Up.pngAttack Power Up next turn</li>
+          <li><span style="color:chartreuse">[On Hit]</span> Inflict 1 Rupture</li>
+          <li><span style="color:chartreuse">[On Hit]</span> Inflict 1 Slash Resist Down next turn (once per turn) </li>
+          <li><span style="color:rgb(255, 0, 76)">[On Kill]</span> Gain 2 Attack Power Up next turn</li>
         </ul>
       </Fragment>
     </Hongyuan>
@@ -320,9 +321,9 @@ import EndLu from "@assets/images/1024px-S827.webp";
       </div>
     
       <ul slot="right">
-      <li>[After Attack] Heal 15 SP</li>
-      <li><span style="color:chartreuse">[On Hit]</span> Onflict 5 Sinking</li>
-      <li>[After Attack] Next turn: -2 SP Loss Efficiency to all allies; -2 to amount of SP lost from E.G.O use</li>
+      <li><span style="color:chartreuse">[After Attack]</span> Heal 15 SP</li>
+      <li><span style="color:chartreuse">[On Hit]</span> Inflict 5 Sinking</li>
+      <li><span style="color:chartreuse">[After Attack]</span> Next turn: -2 SP Loss Efficiency to all allies; -2 to amount of SP lost from E.G.O use</li>
     </ul>
   </TwoColumn>
 
@@ -337,9 +338,9 @@ import EndLu from "@assets/images/1024px-S827.webp";
       </div>
     
       <ul slot="right">
-      <li>[Heads Attack End] Heal 2 allies with the lowest HP percentages for 15 HP </li>
-      <li>[Tails Attack End] Heal 15 SP for 2 allies with the least SP </li>
-      <li>[Crit Attack End] Heal the ally with the lowest HP percentage for 8 HP; Heal the ally with the least SP for 8 SP</li>
+      <li><span style="color:rgb(234, 0, 255)">[Heads Attack End]</span> Heal 2 allies with the lowest HP percentages for 15 HP </li>
+      <li><span style="color:rgb(185, 11, 162)">[Tails Attack End]</span> Heal 15 SP for 2 allies with the least SP </li>
+      <li><span style="color:rgb(234, 0, 255)">[Crit Attack End]</span> Heal the ally with the lowest HP percentage for 8 HP; Heal the ally with the least SP for 8 SP</li>
     </ul>
   </TwoColumn>
 
@@ -382,7 +383,7 @@ import EndLu from "@assets/images/1024px-S827.webp";
         <p class="unbreak">[Unclashable]</p>
         <p>Ignores the target's Defense Skill </p>
         <p>This Skill does not hit an enemy </p>
-        <p>[After Attack] Gain Flower-burying Wedge [埋花櫼]</p>
+        <p><span style="color:chartreuse">[After Attack]</span> Gain Flower-burying Wedge [埋花櫼]</p>
         <ul>
           <li>This unit takes fixed damage by this Skill's Final Power </li>
           <ul>
@@ -403,7 +404,7 @@ import EndLu from "@assets/images/1024px-S827.webp";
             <li>At 5+ Tarnished Blood, Atk Weight +3 and Base Power +3 instead </li>
           </ul>
         </ul>
-        <p>[After Attack] Remove Flower-burying Wedge [埋花櫼] and Tarnished Blood on self, then dies</p>
+        <p><span style="color:chartreuse">[After Attack]</span> Remove Flower-burying Wedge [埋花櫼] and Tarnished Blood on self, then dies</p>
         <ul>
           <li><span style="color:chartreuse">[On Hit]</span> Inflict +3 Rupture Count</li>
           <li><span style="color:chartreuse">[On Hit]</span> Inflict 2 Rupture</li>
