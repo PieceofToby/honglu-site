@@ -4,8 +4,8 @@ const {title1,title2}= Astro.props;
 ---
 <Tabs class="tab-panel" class:list={['pass-your-class-list']}>
 
-  <Fragment slot="tab-1">{title1}</Fragment>
-  <Fragment slot="tab-2">{title2}</Fragment>
+  <Fragment slot="tab-1" >{title1}</Fragment>
+  <Fragment slot="tab-2" >{title2}</Fragment>
 
   <Fragment slot="panel-1">
   <div class="image-container">
@@ -34,6 +34,7 @@ padding:0 2rem;
 justify-content: center;
 
 }
+
 .tab-panel :global(nav){
   display: flex;
   flex-direction: column;
@@ -44,4 +45,6 @@ justify-content: center;
   max-width:800px;
 
 }
+
+
 </style>
